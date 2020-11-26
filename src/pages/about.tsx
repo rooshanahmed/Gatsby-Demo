@@ -1,11 +1,12 @@
 import React from "react"
-import Header from "../components/Header"
+import Layout from "../components/Layout"
 
 export default function About(){
     return(
+      <Layout>
         <div>
-          <Header title="About Page Title" />
           About Page!
         </div>
+      </Layout>
     )
 }
