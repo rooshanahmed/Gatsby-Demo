@@ -3,7 +3,7 @@ import Header from "./Header"
 
 type LayoutProps = {
   children: ReactNode,
-  headerTitle: ReactNode
+  headerTitle: string
 }
 
 export default function Layout({ children, headerTitle }: LayoutProps) {
