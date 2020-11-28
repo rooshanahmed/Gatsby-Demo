@@ -1,11 +1,10 @@
-exports.createPages = async function ({ actions }) {
+exports.onCreatePage = async ({ page, actions }) => {
+    const { createPage } = actions
 
-    actions.createPage({
-        path: "my-dynamic-page",
-        component: require.resolve(`./src/templates/dynamic-page.tsx`),
-        context: {
-            name: "Rooshan",
-        }
-    })
-    console.log("End of Gatsby Node File");
+    if (page.path.match(/^\/home/)) {
+        page.matchPath = "/home/*"
+
+        createPage(page)
+    }
+    createPage(page);
 }
