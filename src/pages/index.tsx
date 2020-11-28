@@ -14,6 +14,9 @@ export default function Home() {
         <button onClick={() => {
           navigate("/about")
         }}>About Page Button</button>
+        <button onClick={() => {
+          navigate("my-dynamic-page")
+        }}>Dynamic Page</button>
       </div>
     </Layout>
   ) 
